@@ -1,5 +1,13 @@
+let myStorage = window.localStorage;
+let counter;
 
-let counter = 0;
+if (myStorage.length == 0) {
+  counter = 0;
+} else {
+  counter = myStorage.counter;
+}
+
+
 
 function counterDisplay(button, result, reset) {
   button = document.querySelector(button);
@@ -9,6 +17,7 @@ function counterDisplay(button, result, reset) {
   button.addEventListener('click', () => {
     ++counter;
     result.innerHTML = counter;
+    localStorage.setItem('counter', counter);
 
     if (counter > 5) {
       reset.style.display = 'block'
@@ -20,6 +29,7 @@ function counterDisplay(button, result, reset) {
   reset.addEventListener('click', () => {
     counter = 0;
     result.innerHTML = counter;
+    localStorage.setItem('counter', counter);
   })
 
 
