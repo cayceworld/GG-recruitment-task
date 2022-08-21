@@ -38,9 +38,24 @@
       line-height: 150%;
       margin: 0 0 10px 49px;
 
-      span {
-        font-weight: 700;
+      .modal__content {
+        margin-bottom: 15px;
+
+        span {
+          font-weight: 700;
+        }
       }
+      .count-reset{
+        display: none;
+        border: none;
+        background-color: #e94c25;
+        color: #FFFFFF;
+        font-weight: 700;
+        padding: 6px 10px;
+        border-radius: 32px;
+        cursor: pointer;
+      }
+
     }
   }
 }

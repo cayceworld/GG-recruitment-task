@@ -1,12 +1,11 @@
-// popup
+
 function bindModal(open, modal, close) {
   open = document.querySelector(open),
     modal = document.querySelector(modal),
     close = document.querySelector(close)
 
 
-  open.addEventListener('click', e => {
-    e.preventDefault()
+  open.addEventListener('click', () => {
     modal.style.display = 'flex'
   });
 
