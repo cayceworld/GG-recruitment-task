@@ -23,9 +23,9 @@ function scssTask() {
     .pipe(sass([])) // compile SCSS to CSS
     .pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
     .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
-    .pipe(dest('dist')
-      .pipe(browsersync.stream())
-    ); // put final CSS in dist folder
+    
+    .pipe(dest('dist')); // put final CSS in dist folder
+    
 }
 
 function jsTask() {
