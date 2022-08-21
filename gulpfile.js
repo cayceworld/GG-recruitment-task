@@ -14,7 +14,7 @@ var browsersync = require('browser-sync').create();
 // File paths
 const files = {
   scssPath: 'src/scss/**/*.scss',
-  jsPath: 'src/js/**/*.js'
+  jsPath: 'src/js/**/*.js',
 };
 
 function scssTask() {
@@ -23,8 +23,8 @@ function scssTask() {
     .pipe(sass([])) // compile SCSS to CSS
     .pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
     .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
-    
-    .pipe(dest('dist')); // put final CSS in dist folder
+    .pipe(dest('src/css')) // put final CSS in crs/css folder
+    .pipe(dest('dist')) // put final CSS in dist folder
     
 }
 
