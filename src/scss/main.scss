@@ -1,76 +1,7 @@
+@import './box.scss';
+
+
 body {
   font-family: 'Roboto Flex', sans-serif;
 }
 
-.box {
-  max-width: 1440px;
-  margin: 96px auto;
-  padding: 0 40px;
-  display: flex;
-  gap: 95px;
-  align-items: center;
-  justify-content: space-between;
-
-  .box_img {
-    flex: 50% 1 1;
-
-    img {
-      width: 100%;
-      object-fit: contain;
-    }
-  }
-
-  .box_content {
-    flex: 50% 1 1;
-    color: #121212;
-
-    .box-title {
-      font-weight: 700;
-      font-size: 42px;
-      margin-bottom: 24px;
-    }
-
-    .box-text {
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 150%;
-      margin-bottom: 32px;
-    }
-
-    .box-button {
-      border: none;
-      background-color: #E4C1AE;
-      color: #FFFFFF;
-      font-weight: 700;
-      font-size: 16px;
-      padding: 16px 40px;
-      border-radius: 32px;
-    }
-  }
-}
-
-
-
-@media (max-width: 1020px) {
-  .box {
-    flex-wrap: wrap;
-    gap: 24px;
-
-    .box_img {
-      flex-basis: 100%;
-    }
-
-    .box_content {
-      flex-basis: 100%;
-
-      .box-title {
-        margin-bottom: 12px;
-      }
-
-      .box-text {
-        margin-bottom: 12px;
-      }
-    }
-  }
-
-}
